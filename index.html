@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wage Display</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="whole">
+        <div class="inputbar">
+            <div class="inputbutton" onclick="handleStart()">
+                Start
+            </div>
+            <div class="inputnumber">
+                <p class="input_text">Rate: (£/hr)</p>
+                <input type="text" inputmode="numeric" id="rate_input" onkeydown="return validateRateInput(event)">
+            </div>
+            <div class="inputbutton">
+                Reset
+            </div>
+        </div>
+        <div class="content">
+            <div class="info_display">
+                <div class="current_rate">
+                    <p id="current_rate" class="info_text">Current Rate: Unknown</p>
+                </div>
+                <div class="start_time">
+                    <p id="start_time" class="info_text">Start Time: Unknown</p>
+                </div>
+            </div>
+            <div class="your_wage wage_display">
+                <p class="wage_text">You have made</p><p id="your_wage" class="wage_number">£0.00</p><p class="wage_text">so far!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

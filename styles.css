@@ -15,6 +15,9 @@ body {
     gap: 1rem;
 }
 .inputbutton {
+    display: flex;
+    place-content: center;
+    place-items: center;
     background-color: #414141;
     padding: 1rem;
     border-radius: 1rem;
@@ -22,15 +25,15 @@ body {
     font-weight: 900;
     font-size: 2rem;
     min-width: 7rem;
-    text-align: center;
     cursor: pointer;
+    user-select: none;
 }
 .inputnumber {
     display: flex;
     flex-direction: column;
-    place-items: top center;
+    place-items: center;
 }
-.inputbutton:hover, .inputbutton:focus {
+.inputbutton:hover {
     background-color: #717171;
 }
 .input_text {
@@ -45,19 +48,26 @@ body {
     font-size: 1.5rem;
     max-width: 7rem;
 }
+.start_time {
+    display: flex;
+    gap: 0.5rem;
+}
 .wage_display {
     display: flex;
     place-items: center;
+    place-content: center;
     gap: 0.5rem;
     text-align: center;    
 }
 .wage_number {
     font-weight: 900;
     font-size: 2rem;
+    user-select: none;
 }
 .wage_text {
     font-size: 1.5rem;
     user-select: none;
+    text-align: center;
 }
 .info_display {
     padding: 1rem;
@@ -71,4 +81,11 @@ body {
     font-weight: 900;
     font-size: 1.5rem;
     user-select: none;
+}
+
+@media screen and (max-width: 500px) {
+    .inputbutton {
+        font-size: 1.25rem;
+        min-width: 4rem;
+    }
 }
